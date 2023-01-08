@@ -1,0 +1,63 @@
+/* ※参考さいと
+https://digitor.jp/textbook/html-checkbox/ */
+
+
+    html{
+      font-size:10px;
+    }
+
+  
+     /* インプットタグを非表示 */
+     .form__input-btn input{
+      display: none;
+    }
+
+
+    .form__input-btn:nth-of-type(2){
+      margin-left: 3rem;
+    }
+
+
+    .form__input-btn span{
+      position: relative;
+    }
+
+    /* 枠を作る */
+    .form__input-btn span::before{
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: "";
+      display: inline-block;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      border: 1px solid black;
+    }
+
+    /* 中身を作る */
+    .form__input-btn span::after{
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: "";
+      display: inline-block;
+      width: 2.15rem;
+      height: 2.15rem;
+      border-radius: 50%;
+      background-color: black;
+      opacity: 0;
+    }
+
+   
+
+    .form__input-btn input[type=radio]:checked + span::after {
+      opacity: 1;
+    }
+
+ 
+    /* spaceづくり */
+    .form__input-btn span{
+      padding-left: 3rem;
+    }
+
